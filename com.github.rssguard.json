@@ -5,14 +5,14 @@
     "sdk": "org.kde.Sdk",
     "command": "rssguard",
     "rename-icon": "rssguard",
-    "finish-args": [ "--share=ipc",
+    "finish-args": [ "--device=dri",
+                     "--share=ipc",
                      "--share=network",
                      "--socket=x11",
                      "--socket=wayland",
                      "--filesystem=xdg-download",
                      "--talk-name=org.kde.StatusNotifierWatcher",
-                     "--talk-name=org.freedesktop.Notifications",
-                     "--env=QT_QPA_PLATFORM=flatpak" ],
+                     "--talk-name=org.freedesktop.Notifications" ],
     "modules": [
         {
             "name": "rssguard",
