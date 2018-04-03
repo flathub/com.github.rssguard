@@ -24,8 +24,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/martinrotter/rssguard/archive/3.5.4.tar.gz",
-                    "sha256": "03828047151ad4f47a7242651cc38e33d37608b95edd7acaf929b79ec55e82f2"
+                    "url": "https://github.com/martinrotter/rssguard/archive/3.5.6.tar.gz",
+                    "sha256": "8429b20e44fd394d6d053ed87b7e71ced9795f0d1b448621c475421f0e2daafa"
                 }
             ]
         }
