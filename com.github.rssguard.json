@@ -1,7 +1,7 @@
 {
     "id": "com.github.rssguard",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.9",
+    "runtime-version": "5.12",
     "sdk": "org.kde.Sdk",
     "command": "rssguard",
     "rename-icon": "rssguard",
@@ -17,15 +17,12 @@
         {
             "name": "rssguard",
             "buildsystem": "qmake",
-            "post-install": [
-                "install -d /app/share/icons/hicolor/512x512/apps",
-                "install -m644 /app/share/pixmaps/rssguard.png /app/share/icons/hicolor/512x512/apps/rssguard.png"
-            ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/martinrotter/rssguard/archive/3.5.6.tar.gz",
-                    "sha256": "8429b20e44fd394d6d053ed87b7e71ced9795f0d1b448621c475421f0e2daafa"
+                    "branch": "3.5.6",
+                    "type": "git",
+                    "commit": "50af26fa9a84fc1b5aed0471010a0b3c2ed3b5e3",
+                    "url": "git://github.com/martinrotter/rssguard.git"
                 }
             ]
         }
