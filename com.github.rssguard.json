@@ -17,6 +17,10 @@
         {
             "name": "rssguard",
             "buildsystem": "qmake",
+            "post-install": [
+                "install -d /app/share/icons/hicolor/512x512/apps",
+                "install -m644 /app/share/pixmaps/rssguard.png /app/share/icons/hicolor/512x512/apps/rssguard.png"
+            ],
             "sources": [
                 {
                     "branch": "3.5.6",
