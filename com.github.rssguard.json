@@ -19,9 +19,8 @@
             "buildsystem": "qmake",
             "sources": [
                 {
-                    "branch": "3.8.4",
+                    "branch": "master",
                     "type": "git",
-                    "commit": "7ab95a75ceda5dccebe73032e392f9766760b418",
                     "url": "git://github.com/martinrotter/rssguard.git"
                 }
             ]
