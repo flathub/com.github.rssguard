@@ -21,7 +21,7 @@
                 {
                     "branch": "master",
                     "type": "git",
-                    "commit": "64b771e9fa6bcf9cabd73f3f64779d2776e3bb4b",
+                    "commit": "265f10e4995130459c6e536cf23a8bcb790e53e1",
                     "url": "git://github.com/martinrotter/rssguard.git"
                 }
             ]
