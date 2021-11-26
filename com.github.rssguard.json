@@ -1,7 +1,7 @@
 {
     "id": "com.github.rssguard",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15",
+    "runtime-version": "5.15-21.08",
     "sdk": "org.kde.Sdk",
     "command": "rssguard",
     "rename-icon": "rssguard",
