@@ -21,7 +21,7 @@
                 {
                     "type": "git",
                     "url": "git://github.com/martinrotter/rssguard.git",
-                    "tag": "4.0.4"
+                    "tag": "4.1.2"
                 }
             ]
         }
