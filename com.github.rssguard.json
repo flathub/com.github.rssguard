@@ -20,8 +20,8 @@
             "sources": [
                 {
                     "type": "git",
-                    "url": "git://github.com/martinrotter/rssguard.git",
-                    "tag": "4.0.4"
+                    "url": "https://github.com/martinrotter/rssguard.git",
+                    "tag": "4.1.2"
                 }
             ]
         }
