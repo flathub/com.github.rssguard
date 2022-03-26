@@ -20,7 +20,7 @@
             "buildsystem": "cmake-ninja",
             "config-opts: [
                 "-DUSE_WEBENGINE=OFF"
-            ]
+            ],
             "sources": [
                 {
                     "type": "git",
