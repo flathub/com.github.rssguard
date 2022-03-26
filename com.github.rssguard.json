@@ -18,7 +18,7 @@
         {
             "name": "rssguard",
             "buildsystem": "cmake-ninja",
-            "config-opts: [
+            "config-opts": [
                 "-DUSE_WEBENGINE=OFF"
             ],
             "sources": [
