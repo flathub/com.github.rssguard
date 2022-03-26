@@ -18,11 +18,14 @@
         {
             "name": "rssguard",
             "buildsystem": "cmake-ninja",
+            "config-opts: [
+                "-DUSE_WEBENGINE=OFF"
+            ]
             "sources": [
                 {
                     "type": "git",
                     "url": "https://github.com/martinrotter/rssguard.git",
-                    "tag": "4.2.0"
+                    "tag": "4.2.1"
                 }
             ]
         }
