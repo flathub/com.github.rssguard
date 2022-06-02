@@ -24,6 +24,8 @@ cleanup-commands:
 modules:
   - name: rssguard
     buildsystem: cmake-ninja
+    config-opts:
+      - -DNO_UPDATE_CHECK=ON
     sources:
       - type: git
         url: https://github.com/martinrotter/rssguard.git
