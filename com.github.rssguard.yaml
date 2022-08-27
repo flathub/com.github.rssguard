@@ -1,8 +1,8 @@
 id: com.github.rssguard
 runtime: org.kde.Platform
-runtime-version: 5.15-21.08
+runtime-version: 6.3
 base: io.qt.qtwebengine.BaseApp
-base-version: 5.15-21.08
+base-version: 6.3
 sdk: org.kde.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.node16
@@ -22,9 +22,27 @@ finish-args:
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 modules:
+  # Needed for Qt 6.
+  # See also: https://invent.kde.org/packaging/flatpak-kde-runtime/-/issues/26
+  - name: qt6-core5compat
+    buildsystem: cmake-ninja
+    builddir: true
+    sources:
+      - type: archive
+        url: https://download.qt.io/official_releases/qt/6.3/6.3.1/submodules/qt5compat-everywhere-src-6.3.1.tar.xz
+        sha256: a43ec62bd778eaecf88ad7847118d1c2a471b0fcb820f93beb311d7ab9566cfd
+        x-checker-data:
+          type: html
+          url: https://download.qt.io/official_releases/qt/6.3/
+          version-pattern: '>([\d\.-]*)/<'
+          url-template: https://download.qt.io/official_releases/qt/6.3/$version/submodules/qt5compat-everywhere-src-$version.tar.xz
+    post-install:
+      - ln -sr /app/lib/${FLATPAK_ARCH}-linux-gnu/libQt6Core5Compat.so* -t /app/lib
+
   - name: rssguard
     buildsystem: cmake-ninja
     config-opts:
+      - -DBUILD_WITH_QT6=ON
       - -DNO_UPDATE_CHECK=ON
       - -DIS_FLATPAK_BUILD=ON
     sources:
@@ -35,6 +53,7 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
+
   - name: nodejs_and_npm
     buildsystem: simple
     build-commands:
