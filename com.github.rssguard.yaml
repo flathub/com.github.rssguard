@@ -30,8 +30,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/martinrotter/rssguard.git
-        tag: 4.2.3
-        commit: 68c03688bf52b2122a25cc813dfafeff7c1fca28
+        tag: 4.2.4
+        commit: 1f6d7c0bf429c93e6c5b0c2f018a0da509bc1a39
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
