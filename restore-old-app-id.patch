@@ -1,0 +1,65 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 4d17da42..ade6ca1f 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -63,7 +63,7 @@ set(APP_NAME "RSS Guard")
+ set(APP_EMAIL "rotter.martinos@gmail.com")
+ set(APP_AUTHOR "Martin Rotter")
+ set(APP_COPYRIGHT "\\251 2011-${YEAR} ${APP_AUTHOR}")
+-set(APP_REVERSE_NAME "io.github.martinrotter.rssguard")
++set(APP_REVERSE_NAME "com.github.rssguard")
+ set(APP_DONATE_URL "https://github.com/sponsors/martinrotter")
+ set(APP_VERSION "4.2.5")
+ 
+diff --git a/resources/desktop/io.github.martinrotter.rssguard.metainfo.xml b/resources/desktop/io.github.martinrotter.rssguard.metainfo.xml
+index 1c35e277..28eea164 100644
+--- a/resources/desktop/io.github.martinrotter.rssguard.metainfo.xml
++++ b/resources/desktop/io.github.martinrotter.rssguard.metainfo.xml
+@@ -1,7 +1,7 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <!-- Copyright 2017-2022 Martin Rotter <rotter.martinos@gmail.com> -->
+ <component type="desktop-application">
+-  <id>io.github.martinrotter.rssguard</id>
++  <id>com.github.rssguard</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0</project_license>
+   <name>RSS Guard</name>
+@@ -31,7 +31,7 @@
+       <li>Tiny Tiny RSS</li>
+     </ul>
+   </description>
+-  <launchable type="desktop-id">io.github.martinrotter.rssguard.desktop</launchable>
++  <launchable type="desktop-id">com.github.rssguard.desktop</launchable>
+   <screenshots>
+     <screenshot type="default">
+       <image>https://raw.githubusercontent.com/martinrotter/rssguard/master/resources/docs/images/rssguard-window.png</image>
+diff --git a/src/librssguard/definitions/definitions.h b/src/librssguard/definitions/definitions.h
+index 65be2e0a..988730bd 100644
+--- a/src/librssguard/definitions/definitions.h
++++ b/src/librssguard/definitions/definitions.h
+@@ -345,7 +345,7 @@
+ #define APP_LANG_PATH QSL(":/localization")
+ 
+ #if defined(Q_OS_UNIX) && !defined(Q_OS_MACOS)
+-#define APP_DESKTOP_SOURCE_ENTRY_FILE APP_REVERSE_NAME ".autostart"
++#define APP_DESKTOP_SOURCE_ENTRY_FILE "io.github.martinrotter.rssguard.autostart"
+ #define APP_DESKTOP_ENTRY_FILE APP_REVERSE_NAME ".desktop"
+ 
+ #define APP_DESKTOP_ENTRY_PATH QSL(":/desktop")
+diff --git a/src/rssguard/CMakeLists.txt b/src/rssguard/CMakeLists.txt
+index fd2caf8b..62c907e2 100644
+--- a/src/rssguard/CMakeLists.txt
++++ b/src/rssguard/CMakeLists.txt
+@@ -63,10 +63,10 @@ elseif(UNIX AND NOT APPLE AND NOT ANDROID)
+   install(TARGETS app
+     DESTINATION ${CMAKE_INSTALL_BINDIR}
+   )
+-  install(FILES ${CMAKE_SOURCE_DIR}/resources/desktop/${APP_REVERSE_NAME}.desktop
++  install(FILES ${CMAKE_SOURCE_DIR}/resources/desktop/io.github.martinrotter.rssguard.desktop
+     DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications
+   )
+-  install(FILES ${CMAKE_SOURCE_DIR}/resources/desktop/${APP_REVERSE_NAME}.metainfo.xml
++  install(FILES ${CMAKE_SOURCE_DIR}/resources/desktop/io.github.martinrotter.rssguard.metainfo.xml
+     DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo
+   )
+   install(FILES ${CMAKE_SOURCE_DIR}/resources/graphics/${CMAKE_PROJECT_NAME}.png
